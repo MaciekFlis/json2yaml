@@ -1,0 +1,61 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 22146fcd0cd592f4988390b27a63ea44cd0a5c285fba6332ded43766e20f64a6
+
+name:           json2Yaml
+version:        0.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/json2Yaml#readme>
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_json2Yaml
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable json2Yaml
+  main-is: Main.hs
+  other-modules:
+      Paths_json2Yaml
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , aeson-yaml
+    , base >=4.7 && <5
+    , bifunctors
+    , bytestring
+    , json2Yaml
+    , safe
+    , text
+  default-language: Haskell2010
+
+test-suite json2Yaml-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_json2Yaml
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , json2Yaml
+  default-language: Haskell2010
